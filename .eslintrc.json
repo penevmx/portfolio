@@ -1,0 +1,96 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "prettier",
+    "next/core-web-vitals",
+    "next"
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.json"],
+    "createDefaultProgram": true
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "react/no-unescaped-entities": "off",
+    "react/function-component-definition": "off",
+    "react/no-unstable-nested-components": [
+      "error",
+      {
+        "allowAsProps": true
+      }
+    ],
+    "react/no-danger": "off",
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "import/no-cycle": "off",
+    "react/no-array-index-key": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
+    "max-len": [
+      2,
+      {
+        "code": 100,
+        "tabWidth": 2,
+        "ignoreComments": false,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "react/destructuring-assignment": "off",
+    "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
+    "import/no-dynamic-require": "off",
+    "global-require": "off",
+    "no-await-in-loop": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "next/link",
+            "message": "Please use the `link` wrapper utility local to this project in the `common/` folder"
+          },
+          {
+            "name": "next/image",
+            "message": "Please use the `Image` component from the `common/` folder"
+          },
+          {
+            "name": "next/router",
+            "importNames": ["useRouter"],
+            "message": "Please use the `useRouter` custom hook from `/hooks` folder"
+          }
+        ]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"], // Your TypeScript files extension
+      "parserOptions": {
+        "project": ["./tsconfig.json"], // Specify it only for TypeScript files
+        "createDefaultProgram": true
+      }
+    }
+  ]
+}

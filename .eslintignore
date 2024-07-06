@@ -1,0 +1,3 @@
+next.config.js
+.env
+graphql/generated/index.tsx

@@ -14,7 +14,7 @@ const ProjectsListing: React.FC<ProjectsType> = () => {
     >
       <h1 className="text-4xl font-bold mt-10">Projects</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-secondary max-w-[1020px] mt-16 min-w-[410px] animate-fade">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 bg-secondary max-w-[1020px] mt-16 min-w-[360px] animate-fade">
         {projectsInfo.map((project) => (
           <ProjectCard
             key={project.title}

@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main>
+    <main className="p-2">
       <Hero />
       <Divider animated={true} />
       <ProjectsListing />

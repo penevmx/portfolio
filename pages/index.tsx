@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="p-2">
       <Hero />
-      <Divider animated={true} />
+      <Divider animated={false} />
       <ProjectsListing />
       <Divider />
       <Contacts />
